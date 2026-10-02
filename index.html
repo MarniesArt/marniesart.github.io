@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Amarni Stephenson" />
+    <meta name="copyright" content="Copyright 2026 Amarni Stephenson. All rights reserved." />
+    <meta name="rights" content="All artwork, UI/UX design, and creative direction are protected." />
+    <meta
+      name="description"
+      content="The portfolio of Amarni Stephenson — art, fashion, and found details."
+    />
+    <title>Marnies Art | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body id="top">
+    <!-- Keep the header the same across pages so the site never feels lost. -->
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Amarni Stephenson home">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        <span class="brand-name">Amarni Stephenson</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-primary">
+          <a class="is-current" href="index.html">Home</a>
+          <button
+            class="work-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="work-links"
+          >
+            Work
+          </button>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="work-dropdown" id="work-links" hidden>
+          <a href="photography.html">Photography</a>
+          <a href="sketches.html">Sketches</a>
+          <a href="painting.html">Painting</a>
+          <a href="textiles.html">Textiles</a>
+          <a href="sculpts.html">Sculpts</a>
+        </div>
+      </nav>
+
+      <span class="header-note">Portfolio / 2026</span>
+    </header>
+
+    <main>
+      <section
+        class="hero hero--with-conservatory"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Artist · Student</p>
+          <h1 id="hero-title">Amarni<br /><em>Stephenson</em></h1>
+          <p class="intro">A little window into my view of Art & Fashion.</p>
+          <a class="text-link" href="#work"
+            >See the work <span aria-hidden="true">↓</span></a
+          >
+
+          <a class="text-link" href="about.html"
+            >About Me <span aria-hidden="true">↓</span></a
+          >
+        </div>
+
+        <aside
+          class="hero-conservatory reveal-delay"
+          aria-label="Portrait of Amarni Stephenson"
+        >
+          <img
+            src="public/Assets/Profile/me.webp"
+            alt="Portrait of Amarni Stephenson"
+            loading="eager"
+            decoding="async"
+          />
+        </aside>
+      </section>
+
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected pieces</p>
+            <h2 id="work-title">The pinboard</h2>
+          </div>
+          <p class="section-caption">
+            Featured work <span id="slide-count">01 / 01</span>
+          </p>
+        </div>
+
+        <!-- Artwork comes from generated public/artworks.js. -->
+        <div
+          class="gallery"
+          data-gallery
+          data-category="All"
+          role="group"
+          aria-roledescription="carousel"
+          aria-label="Selected artwork"
+        >
+          <button
+            class="gallery-button previous"
+            type="button"
+            aria-label="Previous artwork"
+          >
+            ←
+          </button>
+
+          <figure class="artwork-frame">
+            <div class="tape tape-left" aria-hidden="true"></div>
+            <div class="tape tape-right" aria-hidden="true"></div>
+            <div class="artwork-image-wrap">
+              <img
+                class="artwork-image"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="empty-artwork">
+                <span class="empty-star" aria-hidden="true">✳</span>
+                <p>The first piece is waiting.</p>
+                <small
+                  >Add a Full_Res file and a matching WebP preview, then run
+                  <code>node generate-artworks.mjs</code>.</small
+                >
+              </div>
+            </div>
+            <figcaption class="artwork-label">
+              <span class="artwork-title">Your next piece</span>
+              <span class="artwork-medium">Mixed media</span>
+            </figcaption>
+          </figure>
+
+          <button
+            class="gallery-button next"
+            type="button"
+            aria-label="Next artwork"
+          >
+            →
+          </button>
+        </div>
+
+        <div class="gallery-footer">
+          <div
+            class="gallery-dots"
+            role="group"
+            aria-label="Choose an artwork"
+          ></div>
+        </div>
+      </section>
+
+      <section class="category-section" aria-labelledby="collections-title">
+        <div class="section-heading section-heading--compact">
+          <p class="eyebrow" id="collections-title">Browse the archive</p>
+          <p class="section-caption">Five ways of seeing</p>
+        </div>
+
+        <div class="category-links">
+          <a href="photography.html"
+            ><span>01</span> Photography <b aria-hidden="true">↗</b></a
+          >
+          <a href="sketches.html"
+            ><span>02</span> Sketches <b aria-hidden="true">↗</b></a
+          >
+          <a href="painting.html"
+            ><span>03</span> Painting <b aria-hidden="true">↗</b></a
+          >
+          <a href="textiles.html"
+            ><span>04</span> Textiles <b aria-hidden="true">↗</b></a
+          >
+          <a href="sculpts.html"
+            ><span>05</span> Sculpts <b aria-hidden="true">↗</b></a
+          >
+        </div>
+
+        <!-- The grid is populated from the same artwork list as the carousel. -->
+        <div
+          class="archive-grid"
+          data-artwork-grid
+          aria-label="Artwork archive"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© Amarni Stephenson</span>
+      <span>All Artistic UI/UX Design By Amarni Stephenson</span>
+      <a href="#top">Back to top ↑</a>
+      <span class="footer-notice">&copy; 2026 Amarni Stephenson &middot; All rights reserved.</span>
+      <span class="footer-credit">Sole UI/UX Designer &amp; Creative Director: Amarni Stephenson</span>
+      <div class="footer-actions">
+        <a href="LICENSE.md">License</a>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
+    </footer>
+
+    <script src="public/artworks.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

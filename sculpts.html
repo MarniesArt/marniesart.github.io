@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Amarni Stephenson" />
+    <meta name="copyright" content="Copyright 2026 Amarni Stephenson. All rights reserved." />
+    <meta name="rights" content="All artwork, UI/UX design, and creative direction are protected." />
+    <meta name="description" content="Sculpts by Amarni Stephenson." />
+    <title>Sculpts | Amarni Stephenson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body id="top">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Amarni Stephenson home">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        <span class="brand-name">Amarni Stephenson</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-primary">
+          <a href="index.html">Home</a>
+          <button
+            class="work-trigger is-current"
+            type="button"
+            aria-expanded="false"
+            aria-controls="work-links"
+          >
+            Work
+          </button>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="work-dropdown" id="work-links" hidden>
+          <a href="photography.html">Photography</a>
+          <a href="sketches.html">Sketches</a>
+          <a href="painting.html">Painting</a>
+          <a href="textiles.html">Textiles</a>
+          <a class="is-current" href="sculpts.html">Sculpts</a>
+        </div>
+      </nav>
+      <span class="header-note">Portfolio / 2026</span>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero reveal" aria-labelledby="category-title">
+        <p class="eyebrow">05 / collection</p>
+        <h1 id="category-title">Sculpts</h1>
+        <p class="page-lede">
+          Form, texture, and small experiments made in three dimensions.
+        </p>
+      </section>
+
+      <section
+        class="category-gallery reveal-delay"
+        aria-label="Sculpts gallery"
+      >
+        <div
+          class="gallery"
+          data-gallery
+          data-category="Sculpts"
+          role="group"
+          aria-roledescription="carousel"
+          aria-label="Sculpts"
+        >
+          <button
+            class="gallery-button previous"
+            type="button"
+            aria-label="Previous sculpt"
+          >
+            &larr;
+          </button>
+          <figure class="artwork-frame">
+            <div class="tape tape-left" aria-hidden="true"></div>
+            <div class="tape tape-right" aria-hidden="true"></div>
+            <div class="artwork-image-wrap">
+              <img
+                class="artwork-image"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="empty-artwork">
+                <span class="empty-star" aria-hidden="true">&#10035;</span>
+                <p>Sculpts are coming soon.</p>
+                <small>Add images in <code>public/Assets/Sculpts</code>.</small>
+              </div>
+            </div>
+            <figcaption class="artwork-label">
+              <span class="artwork-title">Your next sculpt</span>
+              <span class="artwork-medium">Sculpts</span>
+            </figcaption>
+          </figure>
+          <button
+            class="gallery-button next"
+            type="button"
+            aria-label="Next sculpt"
+          >
+            &rarr;
+          </button>
+        </div>
+        <div class="gallery-footer">
+          <div
+            class="gallery-dots"
+            role="group"
+            aria-label="Choose a sculpt"
+          ></div>
+          <span class="section-caption" id="slide-count">01 / 01</span>
+        </div>
+      </section>
+
+      <a class="page-back-link" href="index.html#work"
+        >&larr; Back to all work</a
+      >
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; Amarni Stephenson</span>
+      <span>All artwork &amp; design &copy; the artist</span>
+      <a href="#top">Back to top &uarr;</a>
+      <span class="footer-notice">&copy; 2026 Amarni Stephenson &middot; All rights reserved.</span>
+      <span class="footer-credit">Sole UI/UX Designer &amp; Creative Director: Amarni Stephenson</span>
+      <div class="footer-actions">
+        <a href="LICENSE.md">License</a>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
+    </footer>
+    <script src="public/artworks.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

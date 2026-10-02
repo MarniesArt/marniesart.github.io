@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Amarni Stephenson" />
+    <meta name="copyright" content="Copyright 2026 Amarni Stephenson. All rights reserved." />
+    <meta name="rights" content="All artwork, UI/UX design, and creative direction are protected." />
+    <meta
+      name="description"
+      content="About Amarni Stephenson and the ideas behind the work."
+    />
+    <title>About | Amarni Stephenson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body id="top">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Amarni Stephenson home">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        <span class="brand-name">Amarni Stephenson</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-primary">
+          <a href="index.html">Home</a>
+          <button
+            class="work-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="work-links"
+          >
+            Work
+          </button>
+          <a class="is-current" href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="work-dropdown" id="work-links" hidden>
+          <a href="photography.html">Photography</a>
+          <a href="sketches.html">Sketches</a>
+          <a href="painting.html">Painting</a>
+          <a href="textiles.html">Textiles</a>
+          <a href="sculpts.html">Sculpts</a>
+        </div>
+      </nav>
+      <span class="header-note">Portfolio / 2026</span>
+    </header>
+
+    <main class="page-main">
+      <section
+        class="page-hero page-hero--about reveal"
+        aria-labelledby="about-title"
+      >
+        <div class="about-hero-copy">
+          <p class="eyebrow">Welcome!</p>
+          <h1 id="about-title">Hi,<br /><em>I'm Amarni</em></h1>
+          <p class="page-lede">
+            A little section about me, my interests, and what inspires my work.
+            I hope you enjoy it!
+          </p>
+        </div>
+        <img
+          class="hero-profile-portrait"
+          src="public/Assets/Profile/me.webp"
+          alt="Portrait of Amarni Stephenson"
+          loading="eager"
+          decoding="async"
+        />
+      </section>
+
+      <section class="about-layout reveal-delay" aria-label="About Amarni">
+        <div class="about-note">
+          <span class="note-number">01 / about</span>
+          <h2>About<br />Me</h2>
+          <span class="note-signature">Thanks for looking ♡</span>
+        </div>
+
+        <div class="about-copy-large">
+          <p>
+            My name is Amarni Stephenson. I enjoy painting, photography, and
+            creating and designing clothing. I have explored these ideas through
+            my projects at college, where I have mostly explored surrealism in
+            art and feelings of expression.
+          </p>
+          <p>
+            I live in the little town of Upton upon Severn, a scenic, historic
+            place that has nurtured my interest in older-fashioned styles,
+            particularly the 1960s and 1970s. Its bustling events, such as the
+            blues and summer festivals, fill the streets with music and fashion.
+          </p>
+          <p>
+            I hope to one day make and design clothes to sell, and for my
+            designs to appear in fashion magazines, be advertised, and become
+            popular around the world.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="inspirations-section reveal-delay-2"
+        aria-labelledby="inspirations-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Inspiration notes</p>
+            <h2 id="inspirations-title">Artists who inspire me.</h2>
+          </div>
+          <p class="section-caption">01 - 03</p>
+        </div>
+
+        <div
+          class="inspiration-tabs"
+          data-inspiration-tabs
+          role="tablist"
+          aria-label="Inspiration profiles"
+        >
+          <button
+            class="inspiration-tab is-active"
+            id="lana-tab"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="lana-panel"
+          >
+            Lana Del Rey
+          </button>
+          <button
+            class="inspiration-tab"
+            id="iris-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="iris-panel"
+            tabindex="-1"
+          >
+            Iris van Herpen
+          </button>
+          <button
+            class="inspiration-tab"
+            id="juno-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="juno-panel"
+            tabindex="-1"
+          >
+            Juno Calypso
+          </button>
+        </div>
+
+        <article
+          class="inspiration-panel"
+          id="lana-panel"
+          role="tabpanel"
+          aria-labelledby="lana-tab"
+        >
+          <figure class="inspiration-portrait">
+            <img
+              src="public/Assets/Inspiration/lana-del-rey.webp"
+              alt="Portrait of Lana Del Rey"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              Portrait: Andre de Saint-Paul / Wikimedia Commons, CC BY-SA 3.0
+            </figcaption>
+          </figure>
+          <div class="inspiration-copy">
+            <p class="eyebrow">01 / music &amp; style</p>
+            <h3>Lana Del Rey</h3>
+            <p>
+              Lana Del Rey inspires me because her vintage Americana
+              incorporates 1950s and 1960s fashion, while her music focuses on
+              real-life struggles. I love the meaning of her songs and her calm,
+              elegant singing style, which matches the colour themes of her
+              album covers.
+            </p>
+            <p>
+              <em>Lust for Life</em> feels soft and elegant, yet still explores
+              struggles while keeping an upbeat mood. I find this balance in her
+              other albums too, including <em>Norman F***ing Rockwell!</em>,
+              <em>Born to Die</em>, and
+              <em>Did You Know That There's a Tunnel Under Ocean Blvd</em>.
+            </p>
+            <p>
+              While <em>Did You Know That There's a Tunnel Under Ocean Blvd</em>
+              keeps an elegant, upbeat style, it focuses more deeply on personal
+              struggles. By bringing personal scenarios into the open, it helps
+              listeners feel heard and seen, which makes me feel connected to
+              this artist.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="inspiration-panel"
+          id="iris-panel"
+          role="tabpanel"
+          aria-labelledby="iris-tab"
+          hidden
+        >
+          <figure class="inspiration-portrait">
+            <img
+              src="public/Assets/Inspiration/iris-van-herpen.webp"
+              alt="Portrait of Iris van Herpen"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="inspiration-credit">
+              <p>
+                <strong>Credit:</strong>
+                <a
+                  href="https://www.gettyimages.co.uk/detail/news-photo/designer-iris-van-herpen-acknowledges-the-audience-during-news-photo/2223924773?adppopup=true"
+                  >Kristy Sparow</a
+                >
+                / Contributor
+              </p>
+              <p>Getty Images Entertainment &middot; Editorial #2223924773</p>
+            </figcaption>
+          </figure>
+          <div class="inspiration-copy">
+            <p class="eyebrow">02 / fashion &amp; form</p>
+            <h3>Iris van Herpen</h3>
+            <p>
+              I also really like Iris van Herpen because her work investigates
+              body image and real-life problems. I admire her fashion style and
+              the unique designs she produces.
+            </p>
+            <p>
+              She makes distorted dresses using linework and patterns to create
+              the illusion of a distorted body. This shifts the focus away from
+              what a "perfect" body should look like and instead shows the bare,
+              raw truth that everybody is different: there is no single perfect
+              body or beauty standard.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="inspiration-panel"
+          id="juno-panel"
+          role="tabpanel"
+          aria-labelledby="juno-tab"
+          hidden
+        >
+          <figure class="inspiration-portrait">
+            <img
+              src="public/Assets/Inspiration/juno-calypso.webp"
+              alt="Portrait of Juno Calypso"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="inspiration-credit">
+              <p>
+                <strong>Credit:</strong>
+                <a
+                  href="https://www.gettyimages.co.uk/detail/news-photo/juno-calypso-attends-the-melissa-galeria-and-juno-calypso-news-photo/918720430?adppopup=true"
+                  >Dave Benett</a
+                >
+                / Contributor
+              </p>
+              <p>Dave Benett Collection &middot; Editorial #918720430</p>
+            </figcaption>
+          </figure>
+          <div class="inspiration-copy">
+            <p class="eyebrow">03 / photography &amp; feeling</p>
+            <h3>Juno Calypso</h3>
+            <p>
+              Juno Calypso inspires me because she is a photographer who focuses
+              on feminism, isolation, loneliness, self-sufficiency, and body
+              image. These themes are shown throughout her photographs.
+            </p>
+            <p>
+              She is an independent artist, and I love the style of her work:
+              her colour themes and camera angles make the meanings clear and
+              visible. Her style is unique, showing what it can feel like to be
+              a woman when young and older, and what it feels like to grow older
+              and feel stuck.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <a class="page-back-link reveal-delay-2" href="index.html#work"
+        >← Back to the work</a
+      >
+    </main>
+
+    <footer class="site-footer">
+      <span>© Amarni Stephenson</span>
+      <span>All artwork &amp; design © the artist</span>
+      <a href="#top">Back to top ↑</a>
+      <span class="footer-notice">&copy; 2026 Amarni Stephenson &middot; All rights reserved.</span>
+      <span class="footer-credit">Sole UI/UX Designer &amp; Creative Director: Amarni Stephenson</span>
+      <div class="footer-actions">
+        <a href="LICENSE.md">License</a>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
+    </footer>
+    <script src="public/artworks.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
