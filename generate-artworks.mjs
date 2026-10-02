@@ -1,16 +1,15 @@
 /*
-  Run `node generate-artworks.mjs` after adding or replacing artwork files.
+  Run `node generate-artworks.mjs` after adding or replacing a WebP preview.
   It keeps the browser-facing manifest in sync without a big hand-written list.
 */
-import { existsSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { readdirSync, writeFileSync } from "node:fs";
 import { join, relative, resolve, sep } from "node:path";
 
 const projectRoot = resolve(".");
-const fullResRoot = join(projectRoot, "public", "Full_Res");
 const assetsRoot = join(projectRoot, "public", "Assets");
 const manifestPath = join(projectRoot, "public", "artworks.json");
 const browserManifestPath = join(projectRoot, "public", "artworks.js");
-const sourceExtensions = new Set([".jpg", ".jpeg", ".png"]);
+const nonArtworkCategories = new Set(["Inspiration", "Profile"]);
 
 function findFiles(folder) {
   return readdirSync(folder, { withFileTypes: true }).flatMap((entry) => {
@@ -23,42 +22,14 @@ function webPath(filePath) {
   return relative(projectRoot, filePath).split(sep).join("/");
 }
 
-// A later crop or replacement with the same filename stem wins automatically.
-const newestByArtwork = new Map();
-
-for (const fullResPath of findFiles(fullResRoot)) {
-  const extension = fullResPath
-    .slice(fullResPath.lastIndexOf("."))
-    .toLowerCase();
-  if (!sourceExtensions.has(extension)) continue;
-
-  const relativePath = relative(fullResRoot, fullResPath);
-  const [category, ...filenameParts] = relativePath.split(sep);
-  const filename = filenameParts.join(sep);
-  const stem = filename.slice(0, filename.lastIndexOf("."));
-  const key = `${category}/${stem}`.toLowerCase();
-  const existing = newestByArtwork.get(key);
-
-  if (
-    !existing ||
-    statSync(fullResPath).mtimeMs > statSync(existing.fullResPath).mtimeMs
-  ) {
-    newestByArtwork.set(key, { category, stem, fullResPath });
-  }
-}
-
-const artworks = [...newestByArtwork.values()]
-  .map(({ category, stem, fullResPath }) => {
-    const previewPath = join(assetsRoot, category, `${stem}.webp`);
-    return {
-      src: webPath(previewPath),
-      fullSrc: webPath(fullResPath),
-      category,
-      hasPreview: existsSync(previewPath),
-    };
+const artworks = findFiles(assetsRoot)
+  .filter((assetPath) => assetPath.toLowerCase().endsWith(".webp"))
+  .map((assetPath) => {
+    const relativePath = relative(assetsRoot, assetPath);
+    const [category] = relativePath.split(sep);
+    return { src: webPath(assetPath), category };
   })
-  .filter((piece) => piece.hasPreview)
-  .map(({ hasPreview, ...piece }) => piece)
+  .filter((piece) => !nonArtworkCategories.has(piece.category))
   .sort((first, second) =>
     `${first.category}/${first.src}`.localeCompare(
       `${second.category}/${second.src}`,

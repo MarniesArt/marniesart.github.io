@@ -1,212 +1,170 @@
 [
   {
     "src": "public/Assets/Painting/Heart.webp",
-    "fullSrc": "public/Full_Res/Painting/Heart.jpeg",
     "category": "Painting"
   },
   {
     "src": "public/Assets/Painting/Hibiscus.webp",
-    "fullSrc": "public/Full_Res/Painting/Hibiscus.jpeg",
     "category": "Painting"
   },
   {
     "src": "public/Assets/Painting/Lemons.webp",
-    "fullSrc": "public/Full_Res/Painting/Lemons.jpg",
     "category": "Painting"
   },
   {
     "src": "public/Assets/Photography/Abbey.webp",
-    "fullSrc": "public/Full_Res/Photography/Abbey.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Alleyways.webp",
-    "fullSrc": "public/Full_Res/Photography/Alleyways.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Arcade.webp",
-    "fullSrc": "public/Full_Res/Photography/Arcade.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Autumn Is Coming.webp",
-    "fullSrc": "public/Full_Res/Photography/Autumn Is Coming.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Autumn.webp",
-    "fullSrc": "public/Full_Res/Photography/Autumn.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Beach.webp",
-    "fullSrc": "public/Full_Res/Photography/Beach.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Boquet.webp",
-    "fullSrc": "public/Full_Res/Photography/Boquet.JPG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Bus.webp",
-    "fullSrc": "public/Full_Res/Photography/Bus.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Coast.webp",
-    "fullSrc": "public/Full_Res/Photography/Coast.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Concert.webp",
-    "fullSrc": "public/Full_Res/Photography/Concert.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Dinner By The Sea.webp",
-    "fullSrc": "public/Full_Res/Photography/Dinner By The Sea.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Hibiscus Photo.webp",
-    "fullSrc": "public/Full_Res/Photography/Hibiscus Photo.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Holiday.webp",
-    "fullSrc": "public/Full_Res/Photography/Holiday.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Late Night Drive.webp",
-    "fullSrc": "public/Full_Res/Photography/Late Night Drive.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Leaf Litter.webp",
-    "fullSrc": "public/Full_Res/Photography/Leaf Litter.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/London Morning.webp",
-    "fullSrc": "public/Full_Res/Photography/London Morning.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Misty Morning.webp",
-    "fullSrc": "public/Full_Res/Photography/Misty Morning.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Record Shopping.webp",
-    "fullSrc": "public/Full_Res/Photography/Record Shopping.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Scooters.webp",
-    "fullSrc": "public/Full_Res/Photography/Scooters.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Swan.webp",
-    "fullSrc": "public/Full_Res/Photography/Swan.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/TV Girl.webp",
-    "fullSrc": "public/Full_Res/Photography/TV Girl.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/UK Aurora.webp",
-    "fullSrc": "public/Full_Res/Photography/UK Aurora.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Photography/Urban Village.webp",
-    "fullSrc": "public/Full_Res/Photography/Urban Village.PNG",
     "category": "Photography"
   },
   {
     "src": "public/Assets/Sculpts/!920's Mask.webp",
-    "fullSrc": "public/Full_Res/Sculpts/!920's Mask.jpeg",
     "category": "Sculpts"
   },
   {
     "src": "public/Assets/Sculpts/Clay Bodist.webp",
-    "fullSrc": "public/Full_Res/Sculpts/Clay Bodist.jpeg",
     "category": "Sculpts"
   },
   {
     "src": "public/Assets/Sculpts/Floral Mask.webp",
-    "fullSrc": "public/Full_Res/Sculpts/Floral Mask.jpeg",
     "category": "Sculpts"
   },
   {
     "src": "public/Assets/Sculpts/Masks.webp",
-    "fullSrc": "public/Full_Res/Sculpts/Masks.jpeg",
     "category": "Sculpts"
   },
   {
     "src": "public/Assets/Sculpts/Paper Mache Bodist.webp",
-    "fullSrc": "public/Full_Res/Sculpts/Paper Mache Bodist.jpeg",
     "category": "Sculpts"
   },
   {
     "src": "public/Assets/Sketches/1950's.webp",
-    "fullSrc": "public/Full_Res/Sketches/1950's.jpeg",
     "category": "Sketches"
   },
   {
     "src": "public/Assets/Sketches/1960's.webp",
-    "fullSrc": "public/Full_Res/Sketches/1960's.jpeg",
     "category": "Sketches"
   },
   {
     "src": "public/Assets/Sketches/Between The Lines.webp",
-    "fullSrc": "public/Full_Res/Sketches/Between The Lines.jpeg",
     "category": "Sketches"
   },
   {
     "src": "public/Assets/Sketches/Fallen Angel.webp",
-    "fullSrc": "public/Full_Res/Sketches/Fallen Angel.PNG",
     "category": "Sketches"
   },
   {
     "src": "public/Assets/Sketches/Love.webp",
-    "fullSrc": "public/Full_Res/Sketches/Love.jpeg",
     "category": "Sketches"
   },
   {
     "src": "public/Assets/Sketches/Piano Dress.webp",
-    "fullSrc": "public/Full_Res/Sketches/Piano Dress.jpg",
     "category": "Sketches"
   },
   {
     "src": "public/Assets/Textiles/Backless.webp",
-    "fullSrc": "public/Full_Res/Textiles/Backless.jpeg",
     "category": "Textiles"
   },
   {
     "src": "public/Assets/Textiles/Button Sleeves.webp",
-    "fullSrc": "public/Full_Res/Textiles/Button Sleeves.jpeg",
     "category": "Textiles"
   },
   {
     "src": "public/Assets/Textiles/Button Top.webp",
-    "fullSrc": "public/Full_Res/Textiles/Button Top.jpeg",
     "category": "Textiles"
   },
   {
     "src": "public/Assets/Textiles/Embroided Heart.webp",
-    "fullSrc": "public/Full_Res/Textiles/Embroided Heart.JPG",
     "category": "Textiles"
   },
   {
     "src": "public/Assets/Textiles/Over The Shoulder.webp",
-    "fullSrc": "public/Full_Res/Textiles/Over The Shoulder.jpeg",
     "category": "Textiles"
   }
 ]

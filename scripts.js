@@ -1,6 +1,6 @@
 /*
-  Artwork lives in public/artworks.js, generated from the Full_Res and Assets
-  folders. A regular script works whether this site is double-clicked or served.
+  Artwork lives in public/artworks.js, generated from the Assets folder.
+  A regular script works whether this site is double-clicked or served.
 */
 const artworks = Array.isArray(window.portfolioArtworks)
   ? window.portfolioArtworks
@@ -26,12 +26,10 @@ function shuffled(items) {
   return copy;
 }
 
-function openFullResolution(src) {
-  if (!src) return;
-  window.open(src, "_blank", "noopener,noreferrer");
-}
+let openArtworkViewer = () => {};
 
 document.addEventListener("DOMContentLoaded", () => {
+  openArtworkViewer = initialiseArtworkViewer();
   initialiseWorkMenus();
   initialiseInspirationTabs();
   initialiseArtworkGrids();
@@ -40,6 +38,52 @@ document.addEventListener("DOMContentLoaded", () => {
     initialiseGallery(gallery);
   });
 });
+
+function initialiseArtworkViewer() {
+  const dialog = document.createElement("dialog");
+  dialog.className = "artwork-viewer";
+  dialog.setAttribute("aria-labelledby", "artwork-viewer-title");
+  dialog.innerHTML = `
+    <div class="artwork-viewer__layout">
+      <div class="artwork-viewer__image-wrap">
+        <img class="artwork-viewer__image" alt="">
+      </div>
+      <section class="artwork-viewer__details">
+        <button class="artwork-viewer__close" type="button" aria-label="Close artwork viewer">&times;</button>
+        <p class="eyebrow artwork-viewer__category"></p>
+        <h2 id="artwork-viewer-title"></h2>
+        <p class="artwork-viewer__description">A selected piece from Amarni Stephenson’s portfolio.</p>
+      </section>
+    </div>`;
+  document.body.append(dialog);
+
+  const image = dialog.querySelector(".artwork-viewer__image");
+  const title = dialog.querySelector("#artwork-viewer-title");
+  const category = dialog.querySelector(".artwork-viewer__category");
+  const close = dialog.querySelector(".artwork-viewer__close");
+  let trigger = null;
+
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    image.removeAttribute("src");
+    trigger?.focus();
+    trigger = null;
+  });
+
+  return ({ src, artworkName, artworkCategory }, openedBy) => {
+    if (!src) return;
+    trigger = openedBy;
+    image.src = src;
+    image.alt = `${artworkName} — artwork by Amarni Stephenson`;
+    title.textContent = artworkName;
+    category.textContent = artworkCategory;
+    dialog.showModal();
+    close.focus();
+  };
+}
 
 function initialiseInspirationTabs() {
   document.querySelectorAll("[data-inspiration-tabs]").forEach((tabList) => {
@@ -123,7 +167,7 @@ function initialiseArtworkGrids() {
         const artworkName = titleFromFilename(piece.src);
 
         return `
-          <button class="archive-card" type="button" aria-label="Open ${artworkName} full resolution" data-full-src="${piece.fullSrc || piece.src}">
+          <button class="archive-card" type="button" aria-label="View ${artworkName}" data-artwork-src="${piece.src}" data-artwork-name="${artworkName}" data-artwork-category="${piece.category}">
             <span class="archive-loader">Loading...</span>
             <img data-src="${piece.src}" alt="${artworkName} — artwork by Amarni Stephenson" loading="lazy" decoding="async">
             <span class="archive-label">${artworkName}</span>
@@ -146,7 +190,14 @@ function initialiseArtworkGrids() {
       };
 
       card.addEventListener("click", () =>
-        openFullResolution(card.dataset.fullSrc),
+        openArtworkViewer(
+          {
+            src: card.dataset.artworkSrc,
+            artworkName: card.dataset.artworkName,
+            artworkCategory: card.dataset.artworkCategory,
+          },
+          card,
+        ),
       );
       image.src = image.dataset.src;
     });
@@ -169,7 +220,7 @@ function initialiseGallery(gallery) {
   const dots = gallery.parentElement.querySelector(".gallery-dots");
   const count = gallery.closest("main").querySelector("#slide-count");
   let activeIndex = 0;
-  let currentFullSrc = "";
+  let currentPiece = null;
 
   const loader = document.createElement("div");
   loader.className = "artwork-loader";
@@ -183,11 +234,21 @@ function initialiseGallery(gallery) {
   image.tabIndex = 0;
   image.setAttribute("role", "button");
 
-  image.addEventListener("click", () => openFullResolution(currentFullSrc));
+  image.addEventListener("click", () => {
+    if (!currentPiece) return;
+    openArtworkViewer(
+      {
+        src: currentPiece.src,
+        artworkName: titleFromFilename(currentPiece.src),
+        artworkCategory: currentPiece.category,
+      },
+      image,
+    );
+  });
   image.addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
     event.preventDefault();
-    openFullResolution(currentFullSrc);
+    image.click();
   });
 
   if (!pieces.length) {
@@ -200,10 +261,10 @@ function initialiseGallery(gallery) {
   function render() {
     const piece = pieces[activeIndex];
     const artworkName = titleFromFilename(piece.src);
-    currentFullSrc = piece.fullSrc || piece.src;
+    currentPiece = piece;
 
     image.alt = `${artworkName} — artwork by Amarni Stephenson`;
-    image.setAttribute("aria-label", `Open ${artworkName} full resolution`);
+    image.setAttribute("aria-label", `View ${artworkName}`);
     image.classList.remove("is-visible");
     emptyState.hidden = true;
     loader.hidden = false;

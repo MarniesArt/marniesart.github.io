@@ -493,6 +493,90 @@ h2 {
   background: var(--paper);
 }
 
+.artwork-viewer {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.artwork-viewer::backdrop {
+  background: rgba(25, 22, 22, 0.78);
+}
+
+.artwork-viewer__layout {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 31vw);
+}
+
+.artwork-viewer__image-wrap {
+  display: grid;
+  min-width: 0;
+  padding: clamp(24px, 4vw, 64px);
+  place-items: center;
+  background: #161314;
+}
+
+.artwork-viewer__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.artwork-viewer__details {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  padding: 94px clamp(24px, 4vw, 56px) 42px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: var(--paper);
+}
+
+.artwork-viewer__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.artwork-viewer__close:hover {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.artwork-viewer__category {
+  margin: 0 0 14px;
+}
+
+.artwork-viewer__details h2 {
+  font-size: clamp(42px, 5vw, 76px);
+  overflow-wrap: anywhere;
+}
+
+.artwork-viewer__description {
+  margin: 30px 0 0;
+  color: var(--ink-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .artwork-loader {
   position: absolute;
   inset: 0;
@@ -1419,5 +1503,21 @@ h2 {
   .footer-actions {
     margin-left: auto;
     gap: 13px;
+  }
+
+  .artwork-viewer__layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto;
+    overflow-y: auto;
+  }
+
+  .artwork-viewer__image-wrap {
+    min-height: 62vh;
+    padding: 42px 24px;
+  }
+
+  .artwork-viewer__details {
+    min-height: 34vh;
+    padding: 76px 28px 38px;
   }
 }
