@@ -6,8 +6,8 @@ Copyright &copy; 2026 Amarni Stephenson. All rights reserved.
 
 Unless a work clearly names another rights holder, all original artwork,
 photography, sketches, paintings, textiles, sculptures, written content, and
-other creative material in this portfolio—including original content in the
-`public` folder—belong to Amarni Stephenson.
+other creative material in this portfolio, including original content in the
+`public` folder belong to Amarni Stephenson.
 
 Amarni Stephenson is the **sole UI/UX Designer and Creative Director** of this
 portfolio. Its artistic direction, interface design, layout, visual identity,
